@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
  * @author：ldy on 09/02/2018 16:26
  */
 @RestController
-public class AppController {
+public class App1Controller {
 
     @Autowired
     RestTemplate restTemplate;

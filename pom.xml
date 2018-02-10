@@ -15,6 +15,7 @@
         <module>spring-cloud-service1</module>
         <module>spring-cloud-app2</module>
         <module>spring-cloud-service2</module>
+        <module>common-interface</module>
     </modules>
 
 </project>

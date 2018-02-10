@@ -10,6 +10,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <common-interface.version>1.0-SNAPSHOT</common-interface.version>
     </properties>
 
     <parent>
@@ -37,6 +38,13 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+
+        <!-- common-interface -->
+        <dependency>
+            <groupId>com.doing</groupId>
+            <artifactId>common-interface</artifactId>
+            <version>${common-interface.version}</version>
         </dependency>
 
     </dependencies>
