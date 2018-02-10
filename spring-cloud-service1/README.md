@@ -1,4 +1,4 @@
-启动服务两个一样的实例：
+启动两个一样的服务实例：
 - mvn spring-boot:run -Drun.jvmArguments='-Dserver.port=5001'
 - mvn spring-boot:run -Drun.jvmArguments='-Dserver.port=5002'
 

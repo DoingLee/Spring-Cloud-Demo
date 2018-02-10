@@ -24,6 +24,6 @@ public class AppController {
     }
 
     public String helloFallback() {
-        return "sorry ! app1 CircuitBreaker fallback";
+        return "sorry ! service1 CircuitBreaker invokerFallback";
     }
 }

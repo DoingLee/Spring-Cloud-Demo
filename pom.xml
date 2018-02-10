@@ -12,7 +12,9 @@
     <modules>
         <module>spring-cloud-eureka-server</module>
         <module>spring-cloud-app1</module>
-        <module>spring-cloud-servive1</module>
+        <module>spring-cloud-service1</module>
+        <module>spring-cloud-app2</module>
+        <module>spring-cloud-service2</module>
     </modules>
 
 </project>
