@@ -10,13 +10,13 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>1.4.3.RELEASE</spring-cloud.version>
     </properties>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.7.RELEASE</version>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-parent</artifactId>
+        <version>Camden.SR7</version> <!-- 使用spring-cloud-starter-parent统一版本管理，避免依赖冲突，出现ClassNotFoundException -->
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <dependencies>
@@ -30,7 +30,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka-server</artifactId>
-            <version>${spring-cloud.version}</version>
         </dependency>
 
     </dependencies>

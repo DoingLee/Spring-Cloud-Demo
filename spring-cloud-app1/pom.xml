@@ -10,47 +10,49 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud-starter-eureka-server.version>1.4.3.RELEASE</spring-cloud-starter-eureka-server.version>
-        <spring-boot-starter-test.version>1.5.10.RELEASE</spring-boot-starter-test.version>
-        <spring-cloud-starter.version>1.4.3.RELEASE</spring-cloud-starter.version>
     </properties>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.7.RELEASE</version>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-parent</artifactId>
+        <version>Camden.SR7</version> <!-- 使用spring-cloud-starter-parent统一版本管理，避免依赖冲突，出现ClassNotFoundException -->
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <dependencies>
+
         <!--spring boot-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>1.5.7.RELEASE</version>
         </dependency>
 
         <!-- spring boot junit test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <version>${spring-boot-starter-test.version}</version>
             <scope>test</scope>
         </dependency>
 
         <!-- spring cloud eureka client -->
-        <!--old : spring-cloud-starter-eureka-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-            <version>${spring-cloud-starter.version}</version>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
+
 
         <!-- spring cloud ribbon -->
         <!--old : spring-cloud-starter-ribbon-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
-            <version>${spring-cloud-starter.version}</version>
+            <artifactId>spring-cloud-starter-ribbon</artifactId>
+        </dependency>
+
+
+        <!--spring cloud netflix-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
 
     </dependencies>
