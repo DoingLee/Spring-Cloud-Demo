@@ -29,8 +29,10 @@
 
 
 ## TODO
-- zuul、config-server、eureka-server 集群高可用配置
+- feign客户端发送RequestBody类型请求参数
 - 参数调优（请求超时时间、超时重试次数等）
 - Spring DevTools 的使用：http://blog.csdn.net/isea533/article/details/70495714 （本地最高优先级全局配置等）
+- zuul、config-server、eureka-server 集群高可用配置
+
 
 
