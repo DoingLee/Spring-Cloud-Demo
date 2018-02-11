@@ -17,6 +17,7 @@
         <module>spring-cloud-service2</module>
         <module>common-interface</module>
         <module>spring-cloud-zuul</module>
+        <module>spring-cloud-config-server</module>
     </modules>
 
 </project>
