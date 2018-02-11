@@ -46,7 +46,7 @@
 - 获取的配置目录：http://localhost:9000/{application}/{profile}
 - 读取的配置信息：http://localhost:9000/{application}-{profile}.properties 
 对config client测试：
-- 
+- 对config client获取应用的所有配置信息（如：监听6001端口的app1实例）：http://localhost:6001/env
 
 #### 手动动态刷新config client的配置
 (貌似不大管用。。)
