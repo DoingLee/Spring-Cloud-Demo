@@ -1,4 +1,3 @@
-
 ##config-server多环境配置
 
 #### 多环境配置文件：
@@ -52,3 +51,6 @@
 (貌似不大管用。。)
 - 对config client（如：监听6001端口的app1实例）：http POST http://localhost:6001/refresh
 
+
+#### config-repo 地址：
+- https://github.com/DoingLee/config-repo.git
