@@ -1,0 +1,39 @@
+# 使用yml可以在一个文件中配置多个profile的属性，properties则不行
+
+spring:
+  application:
+    name: service1
+  profiles:
+    active: default #当profile找不到时，会进入该active profile
+  cloud:
+    config:
+      discovery:
+         enabled: true
+         serviceId: config-server
+      fail-fast: true
+
+# 让eureka-server自动发现config-server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server-peer1:7001/eureka/, http://eureka-server-peer2:7002/eureka/
+
+---
+
+spring:
+  application:
+    name: service1
+  profiles: online,dev,test
+  cloud:
+    config:
+      discovery:
+          enabled: true
+          serviceId: config-server
+      fail-fast: true
+
+# 让eureka-server自动发现config-server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server-peer1:7001/eureka/, http://eureka-server-peer2:7002/eureka/
+

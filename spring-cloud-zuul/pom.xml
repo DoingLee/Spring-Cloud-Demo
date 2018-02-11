@@ -20,6 +20,12 @@
     </parent>
 
     <dependencies>
+        <!--spring boot actuator-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
         <!--spring cloud zuul-->
         <!--包含：zuul-core、spring-cloud-starter-hystrix、spring-cloud-starter-ribbon、spring-boot-starter-actuator-->
         <dependency>
@@ -27,10 +33,16 @@
             <artifactId>spring-cloud-starter-zuul</artifactId>
         </dependency>
 
-        <!--spring cloud eureka-->
+        <!--spring cloud eureka client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+
+        <!--spring cloud config client-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
     </dependencies>
