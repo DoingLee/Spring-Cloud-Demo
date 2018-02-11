@@ -1,4 +1,4 @@
-## 应用启动步骤
+## 本地应用启动步骤
 
 - 修改host：（为了避免在项目中写ip）
   ```
@@ -8,11 +8,11 @@
   ```
 - [启动 eureka-server](./spring-cloud-eureka-server/README.md)
 - [启动 config-server](./spring-cloud-config-server/README.md)
-- [启动 service1](./service1/README.md)
-- [启动 service2](./service2/README.md)
-- [启动 app1](./app1/README.md)
-- [启动 app2](./app2/README.md)
-- [启动 zuul](./zuul/README.md)
+- [启动 service1](./spring-cloud-service1/README.md)
+- [启动 service2](./spring-cloud-service2/README.md)
+- [启动 app1](./spring-cloud-app1/README.md)
+- [启动 app2](./spring-cloud-app2/README.md)
+- [启动 zuul](./spring-cloud-zuul/README.md)
 
 ## 搭建架构（持续更新）
 ![搭建架构](./搭建架构.png)
