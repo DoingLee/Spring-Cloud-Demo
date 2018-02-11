@@ -35,7 +35,10 @@
 - 参数调优（请求超时时间、超时重试次数等）
 - Spring DevTools 的使用：http://blog.csdn.net/isea533/article/details/70495714 （本地最高优先级全局配置等）
 - zuul、config-server、eureka-server 集群高可用配置
-- 。。。more
+- 消息总线：Spring Cloud Bus
+- 消息驱动的微服务：Spring Cloud Stream
+- 分布式服务跟踪：Spring Cloud Sleuth
+- more。。。
 
 
 
