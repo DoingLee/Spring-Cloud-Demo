@@ -2,6 +2,7 @@ package doing;
 
 import com.doing.vo.UserVo;
 import doing.invoker.Service2Invoker;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,12 +15,15 @@ import javax.annotation.Resource;
 @RestController
 public class App2Controller {
 
-    @Resource(name = "service2") //bean名
+    @Value("${service2}")
+    String service2;
+    @Resource(name = "${service2}") //bean名
     private Service2Invoker service2Invoker;
 
     @RequestMapping(value = "/hello/param", method = RequestMethod.GET)
     public String helloParam() {
         System.out.println("Hello ! I am app2 helloParam.");
+        System.out.println("app2 依赖的 service2 实例：" + service2); //service2-1.0.0-dev
 
         return "Hello ! I am app2. \n" +
                        service2Invoker.helloParam("app2", 1) + "\n";
