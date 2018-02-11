@@ -6,6 +6,7 @@
   127.0.0.1 eureka-server-peer2
   127.0.0.1 eureka-server
   ```
+- 选择使用单环境启动还是多环境启动（dev环境等）
 - [启动 eureka-server](./spring-cloud-eureka-server/README.md)
 - [启动 config-server](./spring-cloud-config-server/README.md)
 - [启动 service1](./spring-cloud-service1/README.md)
