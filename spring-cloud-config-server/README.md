@@ -1,4 +1,4 @@
-##config-server多环境配置
+## config-server多环境配置
 
 #### 多环境配置文件：
 - 1、不同环境（dev、test1、test2、pre1、pre2、online）使用不同profile区分，通过spring boot的spring.profiles.active=dev实现
@@ -21,7 +21,8 @@
       the hostname-sanitized version of spring.application.name.
     - 注册到eureka-server的是eureka.instance.appname
     - 如果eureka.instance.appname没有定义，会默认eureka.instance.appname = spring.application.name
-- 服务消费者：feign客户端依赖的服务于上面的eureka.instance.appname一致：@FeignClient(name = "某个服务的${spring.application.name}.某个环境的${spring.profiles.active}", fallback = XXX.class)
+- 服务消费者：feign/ribbon客户端依赖的服务与上面的eureka.instance.appname一致：
+    - @FeignClient(name = "某个服务的${spring.application.name}.某个环境的${spring.profiles.active}", fallback = XXX.class)
 
 #### spring cloud config 配置方法
 
@@ -44,6 +45,7 @@
 对config-server测试：
 - 获取的配置目录：http://localhost:9000/{application}/{profile}
 - 读取的配置信息：http://localhost:9000/{application}-{profile}.properties 
+
 对config client测试：
 - 对config client获取应用的所有配置信息（如：监听6001端口的app1实例）：http://localhost:6001/env
 
