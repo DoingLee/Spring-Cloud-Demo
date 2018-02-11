@@ -1,0 +1,6 @@
+启动：
+- mvn spring-boot:run
+
+使用http测试：
+- http://localhost:7500/app1/hello
+- http://localhost:7500/app2/hello/param

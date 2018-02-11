@@ -2,6 +2,7 @@ package com.doing.service;
 
 import com.doing.vo.UserVo;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,7 +24,7 @@ public interface Service2 {
     String helloParam(@RequestParam(value = "clientName") String clientName, @PathVariable(value = "version") Integer version);
 
     /**
-     * 失败：Null
+     * 失败：Null (该版本spring-cloud-feign不支持解释Spring mvc的@RequestBody，只支持@RequestParam、@PathVariable、@RequestHeader)
      *
      * POST application/json
      *
@@ -33,6 +34,6 @@ public interface Service2 {
     @RequestMapping(path = "/hello/body", method = RequestMethod.POST)
     @ResponseBody
     @Deprecated
-    UserVo helloBody(UserVo userVo);
+    UserVo helloBody(@RequestBody UserVo userVo);
 
 }

@@ -16,6 +16,7 @@
         <module>spring-cloud-app2</module>
         <module>spring-cloud-service2</module>
         <module>common-interface</module>
+        <module>spring-cloud-zuul</module>
     </modules>
 
 </project>
