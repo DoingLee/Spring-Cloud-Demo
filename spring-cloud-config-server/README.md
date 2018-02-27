@@ -47,6 +47,8 @@
 - 读取的配置信息：http://localhost:9000/{application}-{profile}.properties 
 
 对config client测试：
+- 在本地 ~/.spring-boot-devtools.properties（全局最高优先级配置）加入：
+    - management.security.enabled=false
 - 对config client获取应用的所有配置信息（如：监听6001端口的app1实例）：http://localhost:6001/env
     - 返回的配置按spring boot配置优先级显示。并且显示的配置就是spring应用中读取的最终配置
 
