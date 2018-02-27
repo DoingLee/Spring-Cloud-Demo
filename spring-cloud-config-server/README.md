@@ -29,7 +29,7 @@
 配置读取优先级：
 - https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-external-config
 
-为了使得spring cloud config的配置文件比应用本地的配置文件的优先级要高，对于spring cloud config的配置应写在：
+为了使得spring cloud config server中的配置文件比应用本地的配置文件的优先级要高，在本地应用中对config-server的配置应写在：（应用启动时加载bootstrap配置）
 - bootstrap.properties
 - bootstrap.yml
 
@@ -48,6 +48,7 @@
 
 对config client测试：
 - 对config client获取应用的所有配置信息（如：监听6001端口的app1实例）：http://localhost:6001/env
+    - 返回的配置按spring boot配置优先级显示。并且不会显示重复配置。（即：显示的配置就是spring应用中读取的最终配置）
 
 #### 手动动态刷新config client的配置
 (貌似不大管用。。)
