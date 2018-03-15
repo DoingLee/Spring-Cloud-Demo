@@ -39,10 +39,8 @@
 - 所有应用通用配置：application-{profile}.properties
 
 ##### 本地启动应用时，最高优先级配置方法：
-- 在 ~/.spring-boot-devtools.properties下的配置具有全局最高优先级（所有应用通用）
-
-比如配置可以通过dev-tools读取应用配置信息时：
-- spring应用接入dev-tools配置：
+- 在 ~/.spring-boot-devtools.properties下的配置具有**全局最高优先级**（所有应用通用）
+- 要想使用.spring-boot-devtools.properties里的配置，必须在spring应用接入dev-tools配置： 
 ```
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -50,7 +48,7 @@
     <optional>true</optional>
 </dependency>
 ```
-~/.spring-boot-devtools.properties中：
+- 然后就可以在~/.spring-boot-devtools.properties中写本地配置：
 ```
 management.security.enabled=false
 ```
